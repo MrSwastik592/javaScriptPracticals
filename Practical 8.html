@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="onpageload()" onunload="onpageunload()">
+    <input onkeypress="keypress()" placeholder="keypress()" /><br />
+    <input onkeypress="keyup(this)" placeholder="keyup()" /><br />
+    <input onkeydown="keydown()" placeholder="keydown()" /><br />
+    <input onchange="upper(this)" placeholder="onchange()" /><br />
+    <input onselect="myselect()" placeholder="onselect()" /><br />
+    <input type="text" onfocus="myfocus(this)" placeholder="onfocus()" /><br />
+    <input type="text" onblur="myblur(this)" placeholder="onblur()" /><br />
+    <form onreset="myreset()">
+      Enter your name: <input type="text" size="20" />
+      <input type="reset" />
+    </form>
+    <form onsubmit="confirmInput()" action="https://google.com/">
+      Enter your name: <input id="fname" type="text" size="20" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      function onpageload() {
+        alert("Page is loaded");
+      }
+      function onpageunload() {
+        alert("Page is unloaded");
+      }
+      function keypress() {
+        alert("You pressed a key inside the input field");
+      }
+      function keyup(ele) {
+        ele.value = ele.value.toUpperCase();
+      }
+      function keydown() {
+        alert("You pressed a key inside the input field");
+      }
+      function upper(elem) {
+        elem.value = elem.value.toUpperCase();
+      }
+      function myselect() {
+        alert("Selected text");
+      }
+      function myfocus(x) {
+        x.style.background = "yellow";
+      }
+      function myblur(y) {
+        y.style.background = "Skyblue";
+      }
+      function myreset() {
+        alert("This alert box was triggers by the onreset event");
+      }
+      function confirmInput() {
+        fname = document.forms[1].fname.value;
+        alert("Hello " + fname + "! You will now be redirected to Google");
+      }
+    </script>
+  </body>
+</html>

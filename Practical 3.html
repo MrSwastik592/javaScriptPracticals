@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write("<br><br>Accesing Array :<br>");
+      for (i = 0; i < fruits.length; i++) {
+        document.write(fruits[i] + ",");
+      }
+      document.write("<br><br>Popping Element :");
+      document.write("<br>Element Popped is " + fruits.pop());
+
+      document.write("<br><br>Pushing Element :");
+      fruits.push("Grapes");
+      document.write("<br>Element pushed is Grapes");
+
+      document.write("<br><br>Shifting Element :");
+      document.write("<br>Element Shifted is " + fruits.shift());
+
+      document.write("<br><br>Unshifting Element :");
+      fruits.unshift("Kiwi");
+      document.write("<br>Element unshifted is Kiwi");
+
+      document.write("<br><br>Splice an element in Array:");
+      fruits.splice(2, 0, "Lemon");
+      document.write("<br>Element Spliced is Lemon");
+
+      document.write("<br><br>Concate An Array");
+      const fruitsWith = fruits.concat("dragonfruit");
+      document.write("<br>" + fruitsWith);
+
+      document.write("<br><br>Array is after operations :<br>" + fruits);
+      document.write("<br><br>Sorting an array :");
+      fruits.sort();
+      document.write("<br>" + fruits);
+    </script>
+  </body>
+</html>

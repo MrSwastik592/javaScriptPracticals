@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rollover Effects</title>
+  </head>
+  <body>
+    <textarea
+      rows="2"
+      cols="50"
+      id="change"
+      onmouseover="appearText()"
+      onmouseout="changeText()"
+    ></textarea>
+    <script>
+      function appearText() {
+        document.getElementById("change").innerHTML = "What is rollover ?";
+        document.getElementById("change").style.color = "red";
+      }
+      function changeText() {
+        document.getElementById("change").innerHTML =
+          "Rollover means a webpage changes when the user moves his or her mouse over an object on the page";
+        document.getElementById("change").style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

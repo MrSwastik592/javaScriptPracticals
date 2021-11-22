@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+  </head>
+  <script>
+    var str = "Hello Javascript!";
+    var n = str.search("Javascript");
+    document.write(n + "<br>");
+
+    var str1 = "Hello Javascript!";
+    var n1 = str1.search(/Javascript/i);
+    document.write(n1 + "<br>");
+
+    var str2 = "Hello Javascript!";
+    var n2 = str2.replace("Javascript", "TypeScript");
+    document.write(n2 + "<br>");
+
+    var str3 = "Hello Javascript!";
+    var n3 = str3.replace(/Javascript/i, "Typescript");
+    document.write(n3 + "<br>");
+
+    document.write(/e/.test("Hello Javascript!") + "<br>");
+
+    document.write(/e/.exec("Hello Javascript!") + "<br>");
+  </script>
+</html>

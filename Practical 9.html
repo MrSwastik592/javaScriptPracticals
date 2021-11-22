@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function EnableFunction() {
+        document.forms.myform.myBtn.disabled = false;
+      }
+      function DisableFunction() {
+        document.forms.myform.myBtn.disabled = true;
+      }
+      function ReadOnlyFunction() {
+        document.forms.myform.username.readOnly = true;
+      }
+    </script>
+  </head>
+  <body>
+    <form id="myform">
+      Roll Number:<input type="text" name="roll" /> <br />
+      <br />
+      Name :<input type="text" name="name" /> <br /><br />
+      <img
+        src="Signature.jpg"
+        height="40px"
+        width="200px"
+        onclick='document.getElementById("myform").submit()'
+      />
+
+      <br />
+      <br />
+      <button name="myBtn">Submit</button>
+      <button type="button" onclick="DisableFunction()">
+        Disable Submit Button
+      </button>
+      <input type="button" value="Enable Button" onclick="EnableFunction()" />
+      <br />
+      <br />
+      Username : <input type="text" name="username" id="" />
+      <input
+        type="button"
+        value="Read-only name Field"
+        onclick="ReadOnlyFunction()"
+      />
+    </form>
+  </body>
+</html>

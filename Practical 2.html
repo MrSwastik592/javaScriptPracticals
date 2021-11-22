@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("IF Else Elseif :- <br>");
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 10) {
+        greeting = "Good morning";
+      } else if (time < 20) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      document.write(greeting);
+
+      const age = 10;
+      document.write("<br>age = " + age);
+      if (age > 18) {
+        document.write("<br>Eligible for Voting");
+      } else {
+        document.write("<br>Not Eligible for Voting");
+      }
+
+      document.write("<br><br>Switch Case :-");
+      day = new Date().getDay();
+      switch (day) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+        default:
+          document.write("Everyday is Special day");
+      }
+      document.write("<br>Today is : " + day);
+      document.write("<br><br>For Loop :-");
+      var x;
+      for (x = 2; x <= 4; x++) {
+        document.write("<br>Value of x:" + x);
+      }
+
+      document.write("<br><br>For In :-");
+      var languages = {
+        first: "C",
+        second: "Java",
+        third: "Python",
+      };
+      for (itr in languages) {
+        document.write("<br>" + languages[itr]);
+      }
+
+      document.write("<br><br>Do While :- <br>");
+      var x = 10;
+      do {
+        document.write("Value of x :" + x + "<br>");
+        x++;
+      } while (x < 15);
+
+      document.write("<br><br>While Loop :- <br>");
+      var x = 1;
+      while (x <= 4) {
+        document.write("Value of x :" + x + "<br>");
+        x++;
+      }
+    </script>
+  </body>
+</html>

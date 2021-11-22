@@ -1,0 +1,23 @@
+<html>
+  <script>
+    function getInfo() {
+      return "hello javascript";
+    }
+    document.write("<br>" + getInfo());
+
+    var add = new Function("num1", "num2", "return num1+num2");
+    document.writeln("<br>" + add(2, 5));
+
+    function msg() {
+      alert("hello! this is message");
+    }
+
+    function getcube(number) {
+      alert(number * number * number);
+    }
+  </script>
+  <br />
+  <input type="button" onclick="msg()" value="call function" />
+
+  <input type="button" value="click me for cube of 4" onclick="getcube(4)" />
+</html>

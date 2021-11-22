@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <form action="">
+      ><input type="button" onclick="sayHello()" value="Say Hello" />
+      <button ondblclick="dblClick()">Double Click me</button>
+      <br />
+      <span
+        id="b1"
+        onmouseup="mouseup(this,'GREEN')"
+        onmousedown="mousedown(this,'RED')"
+        >Click me and Hold Then Release</span
+      >
+      <br />
+      <span
+        id="b1"
+        onmouseover="mouseover(this,'BLUE')"
+        onmouseout="mouseout(this,'SILVER')"
+        >Hover Me
+      </span>
+    </form>
+    <script>
+      function sayHello() {
+        alert("Hello World");
+      }
+      function dblClick() {
+        alert("I am Double Click");
+      }
+      function mouseup(ele, clr) {
+        ele.style.color = clr;
+      }
+      function mousedown(ele, clr) {
+        ele.style.color = clr;
+      }
+      function mouseover(ele, clr) {
+        ele.style.color = clr;
+      }
+      function mouseout(ele, clr) {
+        ele.style.color = clr;
+      }
+    </script>
+  </body>
+</html>
