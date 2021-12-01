@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function writeCookie() {
+        if (document.myform.setcustomer.value == "") {
+          alert("Enter some value!");
+          return;
+        }
+        var now = new Date();
+        now.setMonth(now.getMonth() + 1);
+        cookievalue = escape(document.myform.setcustomer.value) + ";";
+        document.cookie = "name = " + cookievalue;
+        document.cookie = "expires = " + now.toUTCString() + "; ";
+
+        document.getElementById("cookies").innerHTML =
+          "Setting Cookies : " + "name=" + cookievalue;
+      }
+      function deleteCookie() {
+        var now = new Date();
+        now.setMonth(now.getMonth() - 1);
+        cookievalue = escape(document.myform.delcustomer.value) + ";";
+        document.cookie = "name = " + cookievalue;
+        document.cookie = "expires = " + now.toUTCString() + "; ";
+        document.getElementById("cookies").innerHTML =
+          "Deleted Cookies : " + "name=" + cookievalue;
+      }
+      function readCookie() {
+        var allcookies = document.cookie;
+
+        cookiearray = allcookies.split(";");
+        for (var i = 0; i < cookiearray.length; i++) {
+          console.log(cookiearray[i]);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myform">
+      <b> <label for="customer">Set Cookie : </label></b><br />
+      Enter name: <input type="text" name="setcustomer" />
+      <input type="button" value="Set Cookie" onclick="writeCookie()" /><br />
+      <b> <label for="customer">Delete Cookie : </label> </b><br />
+      Enter name: <input type="text" name="delcustomer" />
+      <input
+        type="button"
+        value="Delete Cookie"
+        onclick="deleteCookie()"
+      /><br />
+    </form>
+    <b> <label for="customer">Read Cookie : </label> </b>
+    <input type="button" value="Get Cookie" onclick="readCookie()" /><br />
+    <span id="cookies"></span>
+  </body>
+</html>
